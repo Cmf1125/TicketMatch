@@ -24,4 +24,4 @@ handlers:
   upload: robots.txt 
 
 - url: .*
-  script: ticketmatch15.application
+  script: main.app
