@@ -1,0 +1,27 @@
+application: ticketmatch15
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /(.*\.png)
+  mime_type: image/png
+  static_files: template/\1
+  upload: template/(.*\.png)
+  
+- url: /static
+  static_dir: static
+  
+- url: /fonts
+  static_dir: fonts
+  
+- url: /css
+  static_dir: css
+
+- url: /robots.txt
+  static_files: robots.txt
+  upload: robots.txt 
+
+- url: .*
+  script: ticketmatch15.application
